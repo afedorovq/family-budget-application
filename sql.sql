@@ -7,3 +7,9 @@ CREATE TABLE operations (
 	date DATE NOT NULL,
 	PRIMARY KEY (id)
 );
+
+CREATE TABLE categories (
+	id INT NOT NULL AUTO_INCREMENT,
+	category VARCHAR(50) UNIQUE,
+	PRIMARY KEY (id)
+);

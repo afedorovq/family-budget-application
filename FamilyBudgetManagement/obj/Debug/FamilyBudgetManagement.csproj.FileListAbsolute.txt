@@ -24,3 +24,4 @@ E:\programming\!C#\Projects\FamilyBudgetManagement\FamilyBudgetManagement\obj\De
 E:\programming\!C#\Projects\FamilyBudgetManagement\FamilyBudgetManagement\obj\Debug\FamilyBudgetManagement.pdb
 E:\programming\!C#\Projects\FamilyBudgetManagement\FamilyBudgetManagement\obj\Debug\FamilyBudgetManagement.ManageForm.resources
 E:\programming\!C#\Projects\FamilyBudgetManagement\FamilyBudgetManagement\obj\Debug\FamilyBudgetManagement.StatsForm.resources
+E:\programming\!C#\Projects\FamilyBudgetManagement\FamilyBudgetManagement\obj\Debug\FamilyBudgetManagement.CategoriesForm.resources
