@@ -28,8 +28,9 @@ namespace FamilyBudgetManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string date = dateTimePicker1.Value.Date.ToString("yyyy-MM-dd");
             string insertQuery = "insert into family_budget_management.operations(sum, type, date) " +
-                "values(" + textBox1.Text + ", '+', '2021-06-21');";
+                "values(" + textBox1.Text + ", '+', '" + date + "');";
             
             MySqlConnection connection = databaseConnector.getConnection();
             connection.Open();
@@ -42,8 +43,9 @@ namespace FamilyBudgetManagement
 
         private void button2_Click(object sender, EventArgs e)
         {
+            string date = dateTimePicker1.Value.Date.ToString("yyyy-MM-dd");
             string insertQuery = "insert into family_budget_management.operations(sum, type, date) " +
-                "values(" + textBox2.Text + ", '-', '2021-06-21');";
+                "values(" + textBox2.Text + ", '-', '" + date + "');";
 
             MySqlConnection connection = databaseConnector.getConnection();
             connection.Open();
@@ -59,6 +61,10 @@ namespace FamilyBudgetManagement
             this.Hide();
             MainForm mainForm = new MainForm();
             mainForm.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
         }
     }
 }
