@@ -5,7 +5,9 @@ CREATE TABLE operations (
 	sum DECIMAL NOT NULL,
 	type ENUM('+', '-') NOT NULL,
 	date DATE NOT NULL,
-	PRIMARY KEY (id)
+	category_type VARCHAR(54),
+	PRIMARY KEY (id),
+	FOREIGN KEY(category_type) REFERENCES categories(category)
 );
 
 CREATE TABLE categories (
