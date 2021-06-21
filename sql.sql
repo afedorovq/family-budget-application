@@ -1,6 +1,6 @@
 create database family_budget_management;
 
-CREATE TABLE operations (
+CREATE TABLE operations(
 	id INT NOT NULL AUTO_INCREMENT,
 	sum DECIMAL NOT NULL,
 	type ENUM('+', '-') NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE operations (
 	FOREIGN KEY(category_type) REFERENCES categories(category)
 );
 
-CREATE TABLE categories (
+CREATE TABLE categories(
 	id INT NOT NULL AUTO_INCREMENT,
 	category VARCHAR(50) UNIQUE,
 	PRIMARY KEY (id)
