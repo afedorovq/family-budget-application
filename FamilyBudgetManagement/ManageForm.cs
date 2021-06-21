@@ -19,6 +19,8 @@ namespace FamilyBudgetManagement
         public ManageForm()
         {
             InitializeComponent();
+
+            initComboBox();
         }
 
         private void ManageForm_Load(object sender, EventArgs e)
@@ -44,8 +46,8 @@ namespace FamilyBudgetManagement
         private void button2_Click(object sender, EventArgs e)
         {
             string date = dateTimePicker1.Value.Date.ToString("yyyy-MM-dd");
-            string insertQuery = "insert into family_budget_management.operations(sum, type, date) " +
-                "values(" + textBox2.Text + ", '-', '" + date + "');";
+            string insertQuery = "insert into family_budget_management.operations(sum, type, date, category_type) " +
+                "values(" + textBox2.Text + ", '-', '" + date + "', '" + comboBox1.SelectedItem + "');";
 
             MySqlConnection connection = databaseConnector.getConnection();
             connection.Open();
@@ -65,6 +67,21 @@ namespace FamilyBudgetManagement
 
         private void button4_Click(object sender, EventArgs e)
         {
+        }
+
+        private void initComboBox()
+        {
+            String sql = "select category from categories;";
+            MySqlConnection connection = databaseConnector.getConnection();
+            connection.Open();
+            MySqlCommand command = new MySqlCommand(sql, databaseConnector.getConnection());
+            MySqlDataReader dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                comboBox1.Items.Add(dataReader[0]);
+            }
+            connection.Close();
         }
     }
 }

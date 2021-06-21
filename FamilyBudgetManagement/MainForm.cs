@@ -23,6 +23,8 @@ namespace FamilyBudgetManagement
             label5.Text = getConsumption().ToString() + "₽";
 
             label6.Text = getBudget().ToString() + "₽";
+
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -101,6 +103,13 @@ namespace FamilyBudgetManagement
             this.Hide();
             StatsForm statsForm = new StatsForm();
             statsForm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CategoriesForm categoriesForm = new CategoriesForm();
+            categoriesForm.Show();
         }
     }
 }
